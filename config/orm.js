@@ -1,5 +1,5 @@
 //dependencies
-var dbConnection = require("./connection.js");
+var connection = require("./connection.js");
 
 //define the object relational mapper
 var orm = 
