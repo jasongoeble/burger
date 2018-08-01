@@ -1,9 +1,10 @@
 //dependencies
-var dbConnection = require("./connection");
+var dbConnection = require("./connection.js");
 
-
+//define the object relational mapper
 var orm = 
 {
+    //select all query - all values from the specified table (tableInput)
     selectAll: function(tableInput) 
     {
         var queryString = "SELECT * FROM ??";
@@ -13,6 +14,7 @@ var orm =
             console.log(result);
         });
     },
+    //insert query - insert a rows worth of data (newRow) into the specified table (tableInput)
     insertOne: function(tableInput, newRow) 
     {
         var queryString = "INSERT INTO ?? SET ??";
@@ -23,11 +25,13 @@ var orm =
             console.log(result);
         });
     },
-    updateOne: function(tableInput, colValue, newStatus, itemName, itemValue) 
+    //update query - update the value of fields in a specified column (colName) to a new value (newValue) in the specified table (tableInput) 
+    //only where a specific column value (targetCol) is equal to the desired condition (targetValue)
+    updateOne: function(tableInput, colName, newValue, targetCol, targetValue) 
     {
         var queryString = "UPDATE ?? SET ?? = ?? WHERE ?? = ??";
         console.log(queryString);
-        connection.query(queryString,[tableInput, colValue, newStatus, itemName, itemValue], function(err, result) 
+        connection.query(queryString,[tableInput, colName, newValue, targetCol, targetValue], function(err, result) 
         {
             if (err) throw err;
             console.log(result);
