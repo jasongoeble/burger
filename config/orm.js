@@ -5,7 +5,7 @@ var dbConnection = require("./connection.js");
 var orm = 
 {
     //select all query - all values from the specified table (tableInput)
-    selectAll: function(tableInput) 
+    all: function(tableInput) 
     {
         var queryString = "SELECT * FROM ??";
         connection.query(queryString, [tableInput], function(err, result) 
@@ -15,7 +15,7 @@ var orm =
         });
     },
     //insert query - insert a rows worth of data (newRow) into the specified table (tableInput)
-    insertOne: function(tableInput, newRow) 
+    create: function(tableInput, newRow) 
     {
         var queryString = "INSERT INTO ?? SET ??";
         console.log(queryString);
@@ -27,7 +27,7 @@ var orm =
     },
     //update query - update the value of fields in a specified column (colName) to a new value (newValue) in the specified table (tableInput) 
     //only where a specific column value (targetCol) is equal to the desired condition (targetValue)
-    updateOne: function(tableInput, colName, newValue, targetCol, targetValue) 
+    update: function(tableInput, colName, newValue, targetCol, targetValue) 
     {
         var queryString = "UPDATE ?? SET ?? = ?? WHERE ?? = ??";
         console.log(queryString);
