@@ -4,7 +4,7 @@ var burger = require("../models/burger.js");
 var router = express.Router();
 
 
-// Create all our routes and set up logic within those routes where required
+// GET route for displaying all burgers in db
 router.get("/", function(req, res) 
 {
     //for all burgers

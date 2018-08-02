@@ -2,11 +2,7 @@
 	{{name}}
 
 	<button class="change-devoured" data-id="{{id}}" data-newStatus="{{devoured}}">
-		{{#if devoured}}Eaten{{else}}{{/if}}
+		{{#if devoured="1"}}Eaten{{else}}{{/if}}
 	</button>
-
-<!--
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
--->
 
 </li>
