@@ -5,24 +5,12 @@
 <ul>
   {{#each burger}}
     {{#unless devoured}}
-      {{> burgers/burger-block devoured=false}}
+      {{> burgers/burger-block devoured="1"}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<!--
 
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
--->
 <h2>Add a Burger</h2>
 <form class="create-form">
 

@@ -1,5 +1,5 @@
 //dependencies
-var connection = require("./connection.js");
+var connection = require("../config/connection.js");
 
 //define the object relational mapper
 var orm = 
@@ -29,7 +29,7 @@ var orm =
     //only where a specific column value (targetCol) is equal to the desired condition (targetValue)
     update: function(tableInput, colName, newValue, targetCol, targetValue) 
     {
-        var queryString = "UPDATE ?? SET ?? = ?? WHERE ?? = ??";
+        var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
         console.log(queryString);
         connection.query(queryString,[tableInput, colName, newValue, targetCol, targetValue], function(err, result) 
         {
