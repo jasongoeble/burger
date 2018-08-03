@@ -14,7 +14,7 @@ $(function() {
       $.ajax("/api/burger/" + id, 
       {
         type: "PUT",
-        data: newStatus
+        data: newDevouredState
       }).then(
         function() 
         {
