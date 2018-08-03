@@ -7,11 +7,13 @@ var router = express.Router();
 // GET route for displaying all burgers in db
 router.get("/", function(req, res) 
 {
+    var hbsObject = {};
+
     //for all burgers
     burger.all(function(data) 
     {
         //define a handlebar object for every burger
-        var hbsObject = 
+        hbsObject = 
         {
             //each burger will have some data associate with it, consisting of a property and value
             burger: data
@@ -19,9 +21,11 @@ router.get("/", function(req, res)
     //using console log to view the data that is being captured for handlebar rendering
     console.log(hbsObject);
 
-    //render the handlebar object to the browser using the index.handlebars file
-    res.render("index", hbsObject);
   });
+
+      //render the handlebar object to the browser using the index.handlebars file
+      res.render("index", hbsObject);
+
 });
 
 //POST router to push new burger values into the database
