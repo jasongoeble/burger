@@ -2,12 +2,35 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
 		<title>Fun with Burgers!</title>
+		<!-- jquery library -->
 		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- jquery button functionality -->
 		<script src="/assets/js/burgers.js"></script>
+		<!-- bootstrap styling -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!-- custom styling-->
+		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
 	</head>
 	<body>
-		{{{ body }}}
+	<div class="jumbotron">
+		<h1 class="display-4">It's Burger Time!</h1>
+		<p class="lead"></p>
+		<hr class="my-4">
+	</div>
+	<div class="burgerDisplayZone">
+		<div class="row">
+			<div class="col-1">
+
+			</div>
+			<div class="col-10">
+				{{{ body }}}
+			</div>
+			<div class="col-1">
+				
+			</div>
+		</div>
+		
+	</div>
 	</body>
 </html>

@@ -2,6 +2,7 @@
 
 <h2>Burgers available to be devoured</h2>
 
+<!-- for the uneaten burgers -->
 <ul>
 {{#each burger}}
     {{#unless devoured}}
@@ -10,6 +11,16 @@
   {{/each}}
 </ul>
 
+<!-- for the "devoured" burgers -->
+
+<h2> Burgers already devoured</h2>
+<ul>
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured="0"}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
